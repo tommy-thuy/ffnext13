@@ -3,8 +3,6 @@ import GoogleProvider from "next-auth/providers/google"
 import { NextAuthOptions } from "next-auth"
 import GitHubProvider from "next-auth/providers/github"
 import CredentialsProvider from "next-auth/providers/credentials"
-import { useUserService } from '@/services';
-import { useFetch } from '@/helpers/client';
 
 export const OPTIONS: NextAuthOptions = {
   providers: [
@@ -22,13 +20,12 @@ export const OPTIONS: NextAuthOptions = {
         password: { label: "Password", type: "password" }
       },
       async authorize (credentials, req) {
-        const userService = useUserService();
-        const fetch = useFetch();
+    
         if (typeof credentials !== "undefined") {
-          const res = await userService.login(credentials.email, credentials.password)
+          
           if (typeof res !== "undefined") {
            
-            // return { ...res.user, apiToken: res.token }
+            //return { ...res.user, apiToken: res.token }
           } else {
             return null
           }

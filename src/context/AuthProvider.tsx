@@ -1,6 +1,6 @@
 'use client'
 
-import { SessionProvider } from 'next-auth/react'
+// import { SessionProvider } from 'next-auth/react'
 import { SWRConfig } from 'swr';
 
 
@@ -18,8 +18,9 @@ export default function AuthProvider({ children }: {
  
   return (
     <SWRConfig value={{ fetcher }}>
-    <SessionProvider>
+    {/* <SessionProvider> */}
       {children}
-    </SessionProvider></SWRConfig>
+    {/* </SessionProvider>*/}
+    </SWRConfig> 
   )
 }
