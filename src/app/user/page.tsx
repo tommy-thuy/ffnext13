@@ -17,12 +17,12 @@ function Users() {
 
   useEffect(() => {
     userService.getAll();
-    userService.getCurrent();
+    
   }, []);
 
   return (
     <div className="max-w-6xl mx-auto px-4 xl:px-0 mt-20 mb-20">
-      <h1 className="text-xl mb-10 font-bold leading-tight tracking-tight  md:text-2xl ">Hi </h1>
+      <h1 className="text-xl mb-10 font-bold leading-tight tracking-tight  md:text-2xl ">User list</h1>
       <Link
         href="/user/add"
         className="w-full text-center bg-indigo-600 px-6 py-2 rounded-md font-bold hover:bg-indigo-500 active "

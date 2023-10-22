@@ -1,4 +1,5 @@
 import { useMyList } from '@/hooks';
+import Image from 'next/image';
 import { Details } from '@/types';
 import Icon from '../Icon';
 import ButtonBack from '../ButtonBack';
@@ -32,9 +33,9 @@ const DetailsPage = ({ details, loading }: Props) => {
                 <div className="absolute h-full w-full bg-black opacity-75"></div>
               </button>
               {details?.backdrop_path ? (
-                <img
+                <Image
                   className="object-cover w-full rounded-lg"
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_original_URL}${details?.backdrop_path}`}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_original_URL}${details?.backdrop_path}`} alt=""
                 />
               ) : (
                 <div className="flex items-center justify-center rounded-lg w-full bg-gray-800 h-64 text-gray-900">

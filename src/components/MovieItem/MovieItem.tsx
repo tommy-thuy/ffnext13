@@ -1,5 +1,5 @@
 import { Movie, Genre } from '@/types';
-
+import Image from 'next/image';
 interface Props {
   details: Movie;
   genres: Genre[];
@@ -11,9 +11,9 @@ const MovieItem = ({ details, genres }: Props) => {
   return (
     <div className="h-full relative rounded-lg overflow-hidden shadow-sm">
       {details?.backdrop_path ? (
-        <img
+        <Image
           className="object-cover w-full h-56"
-          src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${details?.backdrop_path}`}
+          src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${details?.backdrop_path}`} alt=""
         />
       ) : (
         <div className="w-full h-56 bg-gray-700" />
