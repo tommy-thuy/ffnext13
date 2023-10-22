@@ -6,7 +6,7 @@ import CredentialsProvider from "next-auth/providers/credentials"
 
 
 
-export const options: NextAuthOptions = {
+export const OPTIONS: NextAuthOptions = {
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID!,
@@ -126,7 +126,7 @@ export const options: NextAuthOptions = {
 //   },
 // }
 
-const handler = NextAuth(options)
+const handler = NextAuth(OPTIONS)
 
 export { handler as GET, handler as POST } 
 
