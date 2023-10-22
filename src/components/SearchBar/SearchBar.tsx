@@ -4,7 +4,7 @@ import { usePathname, useSearchParams, useRouter   } from 'next/navigation'
 
 import { useLocalStorage } from '@/hooks';
 import Icon from '../Icon';
-import {NavUser} from '../User'
+
 
 interface SearchModalProps {
   children: React.ReactNode;
@@ -65,7 +65,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex space-x-4 items-center">
+    <>
       <button
         onClick={() => setIsModalOpen(true)}
         className="relative cursor-pointer flex items-center p-3 sm:p-2 px-4 sm:px-3  bg-gray-800 rounded focus:outline-none sm:w-48 w-full"
@@ -124,8 +124,8 @@ const SearchBar = () => {
           ) : null}
         </SearchModal>
       ) : null}
-      <NavUser />
-    </div>
+     
+    </>
   );
 };
 
