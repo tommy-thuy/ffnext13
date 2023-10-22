@@ -3,7 +3,7 @@ import React from 'react';
 import useSWR from 'swr';
 import useSWRInfinite from 'swr/infinite';
 
-import { MediaType, Movie, Credits, Details, Results } from 'types';
+import { MediaType, Movie, Credits, Details, Results } from '@/types';
 
 export const useDetails = (mediaType: MediaType, id: string | string[]) => {
   const { data: media, error: errorMedia } = useSWR<Movie>(`${mediaType}/${id}`);
