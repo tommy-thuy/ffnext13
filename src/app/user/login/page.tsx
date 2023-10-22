@@ -3,9 +3,9 @@ import type { Metadata, ResolvingMetadata } from 'next';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import Image from 'next/image';
-import { useState } from 'react';
+
 import { useUserService } from '@/services';
-import { signIn } from "next-auth/react";
+
 
 export default Login;
 
@@ -25,15 +25,7 @@ function Login() {
     await userService.login(username, password);
   }
 
-  const onSubmitCredentail = async ({ username, password }: any) => {
-    
-    const result = await signIn("credentials", {
-      username: username,
-      password: password,
-      redirect: true,
-      callbackUrl: "/user",
-    });
-  };
+
 
 
   return (

@@ -1,6 +1,7 @@
+import React from "react";
 import MovieCard, { IMovieCard } from "@/components/MovieHomepage/MovieCard";
 import Paginate from "@/components/MovieHomepage/Paginate";
-import React from "react";
+
 
 type Props = {
   searchParams?: {
