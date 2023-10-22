@@ -53,7 +53,7 @@ function AddEdit({ title, user }: { title: string; user?: any }) {
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <div className="flex items-center mb-6 text-2xl">
-        <Image className="mx-auto h-10 w-auto" width={250} height={100} src="/assets/images/the-movie-db-logo.svg" />
+        <Image className="mx-auto h-10 w-auto" width={250} height={100} src="/assets/images/the-movie-db-logo.svg" alt="" />
       </div>
 
       <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
