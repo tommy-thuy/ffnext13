@@ -9,16 +9,12 @@ export { NavUser };
 function NavUser() {
   const [loggingOut, setLoggingOut] = useState<boolean>(false);
   const userService = useUserService();
-  const user = userService.currentUser;
 
   async function logout() {
     setLoggingOut(true);
     await userService.logout();
   }
 
-  useEffect(() => {
-    userService.getCurrent();
-  }, []);
 
   return (
     <>
