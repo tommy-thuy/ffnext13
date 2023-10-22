@@ -23,13 +23,7 @@ export const OPTIONS: NextAuthOptions = {
     
         if (typeof credentials !== "undefined") {
           
-          if (typeof res !== "undefined") {
-           
-            //return { ...res.user, apiToken: res.token }
-          } else {
-            return null
-          }
-        } else {
+       
           return null
         }
         
