@@ -33,7 +33,7 @@ const DetailsPage = ({ details, loading }: Props) => {
                 <div className="absolute h-full w-full bg-black opacity-75"></div>
               </button>
               {details?.backdrop_path ? (
-                <Image
+                <Image width={200} height={300}
                   className="object-cover w-full rounded-lg"
                   src={`${process.env.NEXT_PUBLIC_IMAGE_original_URL}${details?.backdrop_path}`} alt=""
                 />
@@ -78,9 +78,9 @@ const DetailsPage = ({ details, loading }: Props) => {
                   {details?.actors.map((actor) => (
                     <div className="w-24 h-30 mr-5 ml-5 flex-none" key={actor.id}>
                       {actor?.profile_path ? (
-                        <img
+                        <Image width={500} height={300}
                           className="w-24 h-24 object-cover rounded-full"
-                          src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${actor?.profile_path}`}
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${actor?.profile_path}`} alt=''
                         />
                       ) : (
                         <div className="flex items-center justify-center w-24 h-24 bg-gray-700 text-gray-800 rounded-full">

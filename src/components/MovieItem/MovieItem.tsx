@@ -11,7 +11,7 @@ const MovieItem = ({ details, genres }: Props) => {
   return (
     <div className="h-full relative rounded-lg overflow-hidden shadow-sm">
       {details?.backdrop_path ? (
-        <Image
+        <Image width={500} height={300}
           className="object-cover w-full h-56"
           src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${details?.backdrop_path}`} alt=""
         />

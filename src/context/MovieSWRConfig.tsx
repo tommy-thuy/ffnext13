@@ -8,7 +8,7 @@ const fetcher = (url: string) => {
   );
 };
 
-export default function SWRConfigContext({ children }: {
+export default function MovieSWRConfig({ children }: {
   children: React.ReactNode
 }) { 
   return (

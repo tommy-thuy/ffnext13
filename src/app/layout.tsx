@@ -10,7 +10,7 @@ import { GenresProvider } from '@/context/genres';
 import { ThemeProvider } from 'next-themes';
 const inter = Inter({ subsets: ['latin'] });
 import type { Metadata } from 'next'
-import SWRConfigContext from '@/context/SWRConfigContext'
+import MovieSWRConfig from '@/context/MovieSWRConfig'
 
 
 export const metadata: Metadata = {
@@ -34,14 +34,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           speed={200}
           shadow="0 0 10px #FFD948,0 0 5px #FFD948"
         />
-        <SWRConfigContext>       
+        <MovieSWRConfig>       
           <GenresProvider>
             {/* <ThemeProvider enableSystem attribute='class'> */}
             <Header />
             {children}
             <Footer />
             {/* </ThemeProvider> */}
-
             <ToastContainer
               position="bottom-center"
               autoClose={5000}
@@ -55,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               theme="light"
             />
           </GenresProvider>     
-        </SWRConfigContext>
+        </MovieSWRConfig>
       </body>
     </html>
   );
