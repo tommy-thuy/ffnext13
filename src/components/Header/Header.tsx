@@ -1,6 +1,6 @@
 import Nav from '../Nav';
 import Search from '../SearchBar';
-import {NavUser} from '../User'
+import {NavUser, NavMongoDBLogin} from '../User'
 
 const Header = () => (
   <header className="sm:border-b sm:border-gray-800">
@@ -8,7 +8,8 @@ const Header = () => (
       <Nav />
       <div className="flex space-x-4 items-center">
       <Search />  
-      <NavUser />  
+      <NavUser /> 
+      {/* <NavMongoDBLogin />  */}
       </div>  
     </div>
   </header>

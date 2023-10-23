@@ -9,7 +9,7 @@ const NavUser = async () => {
       {!session ? (
         <li>
           <Link href="/sign-in" className="bg-indigo-600 px-6 py-2 rounded-md font-light font-bold hover:bg-indigo-500">
-            Sign In
+            Sign In Github
           </Link>
         </li>
       ) : (
@@ -21,12 +21,7 @@ const NavUser = async () => {
             >
               Profile
             </Link>
-          </li>
-          <li>
-            <Link href="/user" className="bg-indigo-600 px-6 py-2 rounded-md font-light font-bold hover:bg-indigo-500">
-              User list
-            </Link>
-          </li>
+          </li>        
           <li>
             <Link
               href="/sign-out"
