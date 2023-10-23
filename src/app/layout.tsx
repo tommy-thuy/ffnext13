@@ -7,11 +7,10 @@ import NextTopLoader from 'nextjs-toploader';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { GenresProvider } from '@/context/genres';
-import { SWRConfig } from 'swr';
 import { ThemeProvider } from 'next-themes';
 const inter = Inter({ subsets: ['latin'] });
 import type { Metadata } from 'next'
-import AuthProvider from '@/context/AuthProvider'
+import SWRConfigContext from '@/context/SWRConfigContext'
 
 
 export const metadata: Metadata = {
@@ -35,8 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           speed={200}
           shadow="0 0 10px #FFD948,0 0 5px #FFD948"
         />
-        <AuthProvider>
-        {/* <SWRConfig value={{ fetcher }}> */}
+        <SWRConfigContext>       
           <GenresProvider>
             {/* <ThemeProvider enableSystem attribute='class'> */}
             <Header />
@@ -56,9 +54,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               pauseOnHover
               theme="light"
             />
-          </GenresProvider>
-        {/* </SWRConfig> */}
-        </AuthProvider>
+          </GenresProvider>     
+        </SWRConfigContext>
       </body>
     </html>
   );
