@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { getServerSession } from 'next-auth';
-import { options } from '../api/auth/[...nextauth]/options';
+import { authOptions } from "@/app/api/auth/[...nextauth]/auth";
 
 const ProfilePage = async () => {
-  const session = await getServerSession(options);
+  const session = await getServerSession(authOptions);
 
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen ml:h-screen lg:py-0">
