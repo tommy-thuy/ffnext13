@@ -24,6 +24,7 @@ update.schema = joi.object({
     firstName: joi.string(),
     lastName: joi.string(),
     username: joi.string(),
+    email: joi.string(),
     password: joi.string().min(6).allow(''),
 });
 

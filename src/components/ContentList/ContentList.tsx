@@ -76,26 +76,27 @@ function Card({ content }: { content: Content }) {
   const pathname = usePathname()
   let contentLink = `movie/${content.id}`
   return (
-    <Link href={contentLink} className='max-w-[18em]'>
-      <div className='p-4 border-2 rounded-lg shadow-md '>
-        {/* {!poster_path && <div className='bg-gray-100 h-[15rem]'></div>} */}
+    <Link href={contentLink} className='w-full max-w-[18em]'>
+      <div className='p-4 border-2 rounded-lg shadow-md w-full h-[380px] relative'>
+      <div className='w-full h-[280px] relative'>
+        {/* {!poster_path &&} */}
         {!poster_path &&    
-          <Image
-            width={250}
-            height={500}
-            className='h-[18rem]'
-            alt={`Poster of ${title}`}
+          <Image layout="fill"        
+            className='h-[10rem]'
+            alt={`Poster of ${title}`} 
             src='/assets/images/the-movie-db-logo.svg'
+            fill={true}
           />}
         {poster_path && (
           <Image
-            width={250}
-            height={500}
-            className='h-[18rem]'
-            alt={`Poster of ${title}`}
+            layout="fill"        
+            className='h-[10rem]'
+            alt={`Poster of ${title}`} 
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+            fill={true}
           />
         )}
+         </div>
         <div className='flex flex-col justify-between w-full pt-2 h-[4.5rem] sm:h-16'>
           <h1 className='text-sm font-semibold leading-[.9rem] title-font text-primary_light '>
             {name ? name : title}

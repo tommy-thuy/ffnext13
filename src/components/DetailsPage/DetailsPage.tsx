@@ -33,10 +33,12 @@ const DetailsPage = ({ details, loading }: Props) => {
                 <div className="absolute h-full w-full bg-black opacity-75"></div>
               </button>
               {details?.backdrop_path ? (
-                <Image width={200} height={300}
+                <div className="w-full h-[400px] relative">
+                <Image layout="fill"
                   className="object-cover w-full rounded-lg"
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_original_URL}${details?.backdrop_path}`} alt=""
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_original_URL}${details?.backdrop_path}`} alt="" fill={true}
                 />
+                </div>
               ) : (
                 <div className="flex items-center justify-center rounded-lg w-full bg-gray-800 h-64 text-gray-900">
                   <Icon name="picture" className="w-24 h-24" />
@@ -78,10 +80,13 @@ const DetailsPage = ({ details, loading }: Props) => {
                   {details?.actors.map((actor) => (
                     <div className="w-24 h-30 mr-5 ml-5 flex-none" key={actor.id}>
                       {actor?.profile_path ? (
-                        <Image width={500} height={300}
+                        <div className="w-full h-24 relative">
+                        <Image layout="fill"
                           className="w-24 h-24 object-cover rounded-full"
-                          src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${actor?.profile_path}`} alt=''
+                          src={`${process.env.NEXT_PUBLIC_IMAGE_W500_URL}${actor?.profile_path}`} alt='' 
+                          fill={true}
                         />
+                        </div>
                       ) : (
                         <div className="flex items-center justify-center w-24 h-24 bg-gray-700 text-gray-800 rounded-full">
                           <Icon name="user" className="w-10 h-10" />

@@ -7,11 +7,10 @@ const ProfilePage = async () => {
 
   return (
     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen ml:h-screen lg:py-0">
-      <div className="flex items-center mb-6 text-2xl">
+      <div className="flex items-center mb-6 w-full h-[100px] relative">
         <Image
           className="mx-auto h-10 w-auto"
-          width={250}
-          height={100}
+          layout='fill'
           src="/assets/images/the-movie-db-logo.svg"
           alt=""
         />
@@ -28,8 +27,7 @@ const ProfilePage = async () => {
             {session?.user?.image ? (
               <Image
                 src={session.user.image}
-                width={200}
-                height={200}
+                layout='fill'
                 alt={`Profile Pic for ${session.user.name}`}
                 priority={true}
               />

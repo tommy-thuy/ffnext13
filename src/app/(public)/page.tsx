@@ -1,4 +1,3 @@
-
 import type { Metadata, ResolvingMetadata } from 'next';
 
 import React, { useContext, useState } from 'react';
@@ -71,7 +70,6 @@ async function getGenres() {
 export default async function HomePage({ searchParams }: { searchParams: SearchParams }) {
   const data = await getMovies(searchParams);
   const genres = await getGenres();
- 
 
   let { page } = searchParams;
 
@@ -108,11 +106,9 @@ export default async function HomePage({ searchParams }: { searchParams: SearchP
       </main>
 
       <main className="mt-20 border-t border-gray-900 sm:border-gray-800">
-       
-          <UpcomingMovies upcomingMovies={upcomingMovies} />
-          <PopularMovies popularMovies={popularMovies} />
-          <TopRatedMovies topRatedMovies={topRatedMovies} />
-       
+        <UpcomingMovies upcomingMovies={upcomingMovies} />
+        <PopularMovies popularMovies={popularMovies} />
+        <TopRatedMovies topRatedMovies={topRatedMovies} />
       </main>
     </>
   );

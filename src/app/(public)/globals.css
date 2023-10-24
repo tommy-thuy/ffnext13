@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+svg {
+  @apply inline
+}
+
+.custom_loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side, #2A324B 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #2A324B);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+  100% {
+    transform: rotate(1turn)
+  }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -28,10 +50,6 @@ body {
 /* .bg-yellow {
   background-color: #FFD948;
 } */
-body {
-  @apply bg-gray-900 text-gray-300;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -104,6 +122,7 @@ body {
   * {
     @apply border-borderColor;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: 'rlig' 1, 'calt' 1;

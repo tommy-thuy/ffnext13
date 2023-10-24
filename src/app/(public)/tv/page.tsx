@@ -1,6 +1,5 @@
 'use client';
 import useSWR from 'swr';
-
 import { useGenres } from '@/context/genres';
 
 import MovieListScrolling from '@/components/MovieListScrolling';

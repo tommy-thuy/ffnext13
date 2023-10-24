@@ -14,7 +14,7 @@ const MovieCard = ({ movie }: { movie: IMovieCard }) => {
   return (
     <Link href={`/movie/${movie?.id}`} className="w-full max-w-[18em]">
       <div className="w-full h-[400px] relative">
-        <Image width={500} height={300}
+        <Image layout="fill"
           className='h-[18rem]'
           src={
             movie?.poster_path

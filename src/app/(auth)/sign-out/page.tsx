@@ -1,22 +1,22 @@
+
 import { getServerSession } from 'next-auth';
 import { redirect } from 'next/navigation';
-import { options } from '../api/auth/[...nextauth]/options';
+import { authOptions } from "@/app/api/auth/[...nextauth]/auth";
 import Image from 'next/image';
 import { SignOutButton } from '@/components/SignOutButton/SignOutButton';
 
 const SignOutPage = async () => {
-  const session = await getServerSession(options);
+  const session = await getServerSession(authOptions);
 
   if (!session) {
     redirect('/');
   } else {
     return (
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen ml:h-screen lg:py-0">
-        <div className="flex items-center mb-6 text-2xl">
+        <div className="flex items-center mb-6 w-full h-[100px] relative">
           <Image
             className="mx-auto h-10 w-auto"
-            width={250}
-            height={100}
+            layout='fill'
             src="/assets/images/the-movie-db-logo.svg"
             alt=""
           />

@@ -13,7 +13,7 @@ const CastCard = ({ cast }: { cast: ICastCard }) => {
   return (
     <div className="w-full flex flex-col">
       <div className="w-full h-[400px] relative">
-        <Image width={500} height={300}
+        <Image layout="fill"
           src={
             cast?.profile_path
               ? `${process.env.NEXT_IMAGE_URL}${cast?.profile_path}`
