@@ -98,7 +98,7 @@ function Card({ content }: { content: Content }) {
         )}
          </div>
         <div className='flex flex-col justify-between w-full pt-2 h-[4.5rem] sm:h-16'>
-          <h1 className='text-sm font-semibold leading-[.9rem] title-font text-primary_light '>
+          <h1 className='text-sm font-semibold leading-[.9rem] title-font text-primary_light line-clamp-1'>
             {name ? name : title}
           </h1>
 

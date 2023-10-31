@@ -106,9 +106,15 @@ export default async function HomePage({ searchParams }: { searchParams: SearchP
       </main>
 
       <main className="mt-20 border-t border-gray-900 sm:border-gray-800">
-        <UpcomingMovies upcomingMovies={upcomingMovies} />
-        <PopularMovies popularMovies={popularMovies} />
-        <TopRatedMovies topRatedMovies={topRatedMovies} />
+        <Container>
+          <div className="xl:gap-3 xl:grid xl:grid-cols-3">
+            <div className="overflow-y-auto xl:col-span-3">
+              <UpcomingMovies upcomingMovies={upcomingMovies} />
+              <PopularMovies popularMovies={popularMovies} />
+              <TopRatedMovies topRatedMovies={topRatedMovies} />
+            </div>
+          </div>
+        </Container>
       </main>
     </>
   );
