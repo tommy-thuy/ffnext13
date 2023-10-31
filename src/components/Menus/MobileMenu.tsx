@@ -37,7 +37,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/movie/popular`}
                 >
                   <PartyPopper size={19} />
@@ -47,7 +47,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/movie/now-playing`}
                 >
                   <Play size={19} />
@@ -57,7 +57,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/movie/upcoming`}
                 >
                   <CalendarDays size={19} />
@@ -67,7 +67,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/movie/top-rated`}
                 >
                   <TrendingUp size={19} />
@@ -82,7 +82,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer' 
                   href={`/tv/popular`}
                 >
                   <PartyPopper size={19} />
@@ -92,7 +92,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/tv/airing-today`}
                 >
                   <Play size={19} />
@@ -102,7 +102,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/tv/on-the-air`}
                 >
                   <Tv size={19} />
@@ -112,7 +112,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
                 <Link
                   onClick={handleClose}
-                  className='flex items-center gap-3'
+                  className='flex items-center gap-3 cursor-pointer'
                   href={`/tv/top-rated`}
                 >
                   <TrendingUp size={19} />

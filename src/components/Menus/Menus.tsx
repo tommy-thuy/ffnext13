@@ -36,25 +36,25 @@ function Menus() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="min-w-[10rem]">
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/movie/popular`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/popular`}>
                     <PartyPopper size={19} />
                     <span>Popular</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/movie/now-playing`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/now-playing`}>
                     <Play size={19} />
                     <span>Now Playing</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/movie/upcoming`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/upcoming`}>
                     <CalendarDays size={19} />
                     <span>Upcoming</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/movie/top-rated`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/top-rated`}>
                     <TrendingUp size={19} />
                     <span>Top Rated</span>
                   </Link>
@@ -70,25 +70,25 @@ function Menus() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="min-w-[10rem]">
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/tv/popular`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/tv/popular`}>
                     <PartyPopper size={19} />
                     <span>Popular</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/tv/airing-today`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/tv/airing-today`}>
                     <Play size={19} />
                     <span>Airing Today</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/tv/on-the-air`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/tv/on-the-air`}>
                     <Tv size={19} />
                     <span>On TV</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3" href={`/tv/top-rated`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/tv/top-rated`}>
                     <TrendingUp size={19} />
                     <span>Top Rated</span>
                   </Link>
