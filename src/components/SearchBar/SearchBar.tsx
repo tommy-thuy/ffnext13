@@ -69,7 +69,7 @@ const SearchBar = () => {
     
       <button
         onClick={() => setIsModalOpen(true)}
-        className="relative cursor-pointer flex items-center p-3 sm:p-2 px-4 border-[1px] mx-4 min-w-[168px] sm:px-3 border-green-700 rounded focus:outline-none sm:w-48 w-full"
+        className="relative cursor-pointer flex items-center p-3 sm:p-2 px-4 border-[1px]  min-w-[168px] sm:px-3 border-green-700 rounded focus:outline-none sm:w-48 w-full"
       >
         <Icon name="search" className="w-6 sm:w-5 sm:ml-0 mr-2 -ml-px" />
         <span className="text-lg">Search</span>
