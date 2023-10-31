@@ -97,17 +97,86 @@ function Menus() {
             </DropdownMenu>
           </div>
           <div className="flex items-center gap-1">
-            <p>Zustand</p>
+            <p>React Hooks</p>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <ChevronDown size={20} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="min-w-[10rem]">
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/`}>
+                    <PartyPopper size={19} />
+                    <span>Zustand</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/now-playing`}>
+                    <Play size={19} />
+                    <span>Redux Thunk</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/upcoming`}>
+                    <CalendarDays size={19} />
+                    <span>Redux Saga</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/top-rated`}>
+                    <TrendingUp size={19} />
+                    <span>Redux toolkit</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/top-rated`}>
+                    <TrendingUp size={19} />
+                    <span>Apollo Client</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/top-rated`}>
+                    <TrendingUp size={19} />
+                    <span>GraphQL API</span>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           <div className="flex items-center gap-1">
-            <p>Redux Thunk</p>
+            <p>Rendering</p>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <ChevronDown size={20} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="min-w-[10rem]">
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/`}>
+                    <PartyPopper size={19} />
+                    <span>CSR</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/now-playing`}>
+                    <Play size={19} />
+                    <span>SSR</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/upcoming`}>
+                    <CalendarDays size={19} />
+                    <span>SSG</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild className="text-base">
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/movie/top-rated`}>
+                    <TrendingUp size={19} />
+                    <span>ISR</span>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
-          <div className="flex items-center gap-1">
-            <p>Redux Saga</p>
-          </div>
-          <div className="flex items-center gap-1">
-            <p>Redux toolkit</p>
-          </div>
+          
         </div>
       </div>
       <div className="hidden gap-6 md:flex md:items-center">
