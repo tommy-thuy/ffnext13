@@ -8,7 +8,6 @@ import { MediaType, Results } from '@/types';
 import MovieItem from '@/components/MovieItem';
 import LoadingMoviePlaceholder from '@/components/loading-placeholders/LoadingMoviePlaceholder';
 
-
 const SearchPage = () => {
   const { movieGenres, tvGenres } = useGenres();
   const pathname = usePathname();
@@ -27,7 +26,7 @@ const SearchPage = () => {
 
   return (
     <div className="flex">
-      <div className="flex flex-col min-h-screen w-full">
+      <div className="flex flex-col min-h-screen w-full ">
         <main className="flex-1 p-4 md:p-8">
           <div className="flex items-center justify-between my-5">
             <h1 className="text-xl flex items-center">Results for: {search}</h1>
@@ -51,7 +50,6 @@ const SearchPage = () => {
                   </div>
                 ))}
           </div>
-        
         </main>
       </div>
     </div>
@@ -59,6 +57,3 @@ const SearchPage = () => {
 };
 
 export default SearchPage;
-
-
-

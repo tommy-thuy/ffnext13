@@ -25,11 +25,14 @@ const page = async ({ searchParams }: Props) => {
 
   return (
     <main className="flex flex-col mt-6">
-      <div className="w-[1276px] mx-auto flex justify-between items-center mt-10 mb-4">
+      <div className="w-[1330px] max-w-full mx-auto flex justify-between items-center mt-10 mb-4 px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8">
         <h1 className="text-2xl font-medium">Popular Movies</h1>
       </div>
-      <div className="w-[1330px] max-w-full px-4 mx-auto">
-        <div className="grid grid-cols-2 justify-items-center gap-x-2 gap-y-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-3 lg:gap-y-3">
+      <div className="w-[1330px] max-w-full mx-auto">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  
+        mx-auto px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 gap-5"
+        >
           {popularMovies.results.map((movie: IMovieCard) => (
             <MovieCard key={movie?.id} movie={movie} />
           ))}

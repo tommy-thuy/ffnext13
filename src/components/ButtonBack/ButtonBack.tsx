@@ -7,7 +7,7 @@ const ButtonBack = () => {
 
   return (
     <button className="bg-gray-800 rounded-full p-3 focus:outline-none" onClick={() => router.back()}>
-      <Icon name="arrow-left" className="w-4 h-4" />
+      <Icon name="arrow-left" className="w-4 h-4 text-yellow-500" />
     </button>
   );
 };

@@ -6,7 +6,7 @@ import { CalendarDays, ChevronDown, Menu, PartyPopper, Play, SearchIcon, Sun, Tr
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../FilterSidebar/DropDown';
 import MobileHeader from './MobileMenu';
 import ThemeSwitcher from '../Footer/ThemeSwitcher';
-import Search from '../SearchBar';
+
 import { useSession, signOut } from 'next-auth/react';
 import { BsPersonFill } from 'react-icons/bs';
 
@@ -27,7 +27,7 @@ function Menus() {
             />
           </span>
         </Link>
-        <div className="items-center hidden gap-4 md:flex">
+        <div className="items-center hidden gap-4 lg:flex">
           <div className="flex items-center gap-1">
             <p>Movies</p>
             <DropdownMenu>
@@ -179,11 +179,11 @@ function Menus() {
           
         </div>
       </div>
-      <div className="hidden gap-6 md:flex md:items-center">
+      <div className="hidden gap-6 lg:flex lg:items-center">
         <ThemeSwitcher />
-        <Search />
+        
 
-        {session ? (
+        {/* {session ? (
           <>
             <div className="my-0 text-black  ">Signed in as {session.user?.email}</div>
             <div onClick={() => signOut()} className="bg-green-700 ml-6 my-0 rounded-md p-2  text-white">
@@ -200,7 +200,7 @@ function Menus() {
               <Link href="/register">Register</Link>
             </div>
           </>
-        )}
+        )} */}
         {/* <Link href='/search'>
               <input
               type='text'
@@ -215,7 +215,7 @@ function Menus() {
       </div>
 
       <MobileHeader>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Menu />
         </div>
       </MobileHeader>

@@ -8,10 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { GenresProvider } from '@/context/genres';
 
-
 import type { Metadata } from 'next';
 import MovieSWRConfig from '@/context/MovieSWRConfig';
-import GlobalContextProvider from '@/context/GlobalContextProvider'
+import GlobalContextProvider from '@/context/GlobalContextProvider';
 export const metadata: Metadata = {
   title: 'Movie Friend',
   description: 'Movie Friend example'
@@ -36,9 +35,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AuthProvider>
             <MovieSWRConfig>
               <GenresProvider>
-                <Header />
-                {children}
-                <Footer />
+                <div className="flex flex-col min-h-screen w-full">
+                  <Header />
+                  {children}
+                  <Footer />
+                </div>
                 <ToastContainer
                   position="bottom-center"
                   autoClose={5000}

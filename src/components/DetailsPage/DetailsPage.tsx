@@ -27,7 +27,7 @@ const DetailsPage = ({ details, loading }: Props) => {
                 onClick={addToList}
                 className="absolute right-0 flex items-center justify-center mr-3 mt-3 w-10 h-10 rounded-full overflow-hidden focus:outline-none"
               >
-                <span className={`text-sm z-10 ${isInMyList ? 'text-red-600' : 'text-gray-500'}`}>
+                <span className={`text-sm z-10 ${isInMyList ? 'text-red-600' : 'text-yellow-500'}`}>
                   <Icon name="heart" className="w-4" />
                 </span>
                 <div className="absolute h-full w-full bg-black opacity-75"></div>

@@ -12,7 +12,7 @@ import {
 import Link from 'next/link'
 import { useState, ReactNode } from 'react'
 import ThemeSwitcher from '../Footer/ThemeSwitcher'
-import Search from '../SearchBar';
+
 import { signOut, useSession } from 'next-auth/react';
 import { BsPersonFill } from 'react-icons/bs';
 
@@ -24,14 +24,14 @@ function MobileHeader({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div className='md:hidden'>
+    <div className='lg:hidden'>
       <button onClick={() => setOpen(!open)}>
         {!open && children}
         {open && <X />}
       </button>
       {open && (
-        <div className='fixed animate-in duration-200 fade-in slide-in-from-top top-[4rem] pb-4 left-0 w-full bg-background  backdrop-blur-sm'>
-          <div className='px-4 mt-2'>
+        <div className='fixed animate-in duration-200 fade-in slide-in-from-top top-[80px] pb-4 left-0 w-full bg-background  backdrop-blur-sm'>
+          <div className='px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 mt-2'>
             <h3 className='font-medium'>Movies</h3>
             <div className='pl-4'>
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
@@ -76,7 +76,7 @@ function MobileHeader({ children }: { children: ReactNode }) {
               </p>
             </div>
           </div>
-          <div className='px-4 mt-4'>
+          <div className='px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 mt-4'>
             <h3 className='font-medium'>TV Shows</h3>
             <div className='pl-4'>
               <p className='py-2 border-b-[1px] transition-all duration-100 hover:pl-1  cursor-pointer'>
@@ -121,11 +121,10 @@ function MobileHeader({ children }: { children: ReactNode }) {
               </p>
             </div>
           </div>
-          <div className='flex items-center justify-between px-4 mt-6'>
-            <ThemeSwitcher />
-            <Search />
+          <div className='flex items-center justify-between px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8  mt-6'>
+            <ThemeSwitcher />            
           </div>
-          <div className='flex items-center justify-between px-4 mt-6'>
+          <div className='flex items-center justify-between px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 mt-6'>
             {session ? (
               <>
                 <p className="my-4 text-black  ">Signed in as {session.user?.email}</p>

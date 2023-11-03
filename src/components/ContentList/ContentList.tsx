@@ -89,7 +89,7 @@ function Card({ content }: { content: Content }) {
           />}
         {poster_path && (
           <Image
-            layout="fill"        
+            layout="fill"         
             className='h-[10rem]'
             alt={`Poster of ${title}`} 
             src={`https://image.tmdb.org/t/p/w500${poster_path}`}
@@ -98,9 +98,9 @@ function Card({ content }: { content: Content }) {
         )}
          </div>
         <div className='flex flex-col justify-between w-full pt-2 h-[4.5rem] sm:h-16'>
-          <h1 className='text-sm font-semibold leading-[.9rem] title-font text-primary_light line-clamp-1'>
+          <h2 className='text-sm font-semibold leading-[.9rem] title-font text-primary_light line-clamp-1'>
             {name ? name : title}
-          </h1>
+          </h2>
 
           <div className='flex flex-col mt-1 sm:flex-row sm:items-center sm:justify-between'>
             <div className='flex items-center gap-2 text-xs text-gray-400 '>

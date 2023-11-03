@@ -12,10 +12,10 @@ export interface IMovieCard {
 
 const MovieCard = ({ movie }: { movie: IMovieCard }) => {
   return (
-    <Link href={`/movie/${movie?.id}`} className="w-full max-w-[18em]">
+    <Link href={`/movie/${movie?.id}`} className="w-full min-w-[18em] py-4">
       <div className="w-full h-[400px] relative">
         <Image layout="fill"
-          className='h-[18rem]'
+          className='h-[18rem] rounded-xl'
           src={
             movie?.poster_path
               ? `${process.env.NEXT_IMAGE_URL}${movie?.poster_path}`
