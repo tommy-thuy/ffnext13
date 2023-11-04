@@ -104,7 +104,7 @@ function Menus() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="min-w-[10rem]">
                 <DropdownMenuItem asChild className="text-base">
-                  <Link className="flex items-center gap-3 cursor-pointer" href={`/`}>
+                  <Link className="flex items-center gap-3 cursor-pointer" href={`/zustand-portfolio/projects`}>
                     <PartyPopper size={19} />
                     <span>Zustand</span>
                   </Link>

@@ -1,4 +1,4 @@
-import { useMyList } from '@/hooks';
+import { useMyList } from '@/hooks/useSWR';
 import Image from 'next/image';
 import { Details } from '@/types';
 import Icon from '../Icon';

@@ -239,4 +239,3 @@ type TechsTypeProps = {
   svg_link: string;
 }
 
-

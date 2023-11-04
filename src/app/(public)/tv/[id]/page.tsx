@@ -1,6 +1,6 @@
 'use client'
 import { useParams } from 'next/navigation';
-import { useDetails } from '@/hooks';
+import { useDetails } from '@/hooks/useSWR';
 import DetailsPage from '@/components/DetailsPage';
 
 const TvDetailsPage = () => {

@@ -36,7 +36,7 @@ const MovieCard = ({ movie }: { movie: IMovieCard }) => {
               : `bg-green-700`
           }`}
         >
-          {movie?.vote_average}
+          {movie?.vote_average.toFixed(1)}
         </span>
       </div>
     </Link>

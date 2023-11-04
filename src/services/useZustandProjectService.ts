@@ -28,7 +28,7 @@ export const getProjects = async (): Promise<APIProjectsResponse> => {
       throw error
     }
   } catch (error) {
-    const errorWithMessage: ErrorMessageResponse = new Error('Erro interno.')
+    const errorWithMessage: ErrorMessageResponse = new Error('Internal error.')
     throw errorWithMessage
   }
 }
@@ -49,7 +49,7 @@ export const getProjectsById = async (
       throw error
     }
   } catch (error) {
-    const errorWithMessage: ErrorMessageResponse = new Error('Erro interno.')
+    const errorWithMessage: ErrorMessageResponse = new Error('Internal error.')
     throw errorWithMessage
   }
 }
@@ -68,7 +68,7 @@ export const getSkills = async (): Promise<APISkillsResponse> => {
       throw error
     }
   } catch (error) {
-    const errorWithMessage: ErrorMessageResponse = new Error('Erro interno.')
+    const errorWithMessage: ErrorMessageResponse = new Error('Internal error.')
     throw errorWithMessage
   }
 }
@@ -87,7 +87,7 @@ export const getSoftskills = async (): Promise<APISoftskillsResponse> => {
       throw error
     }
   } catch (error) {
-    const errorWithMessage: ErrorMessageResponse = new Error('Erro interno.')
+    const errorWithMessage: ErrorMessageResponse = new Error('Internal error.')
     throw errorWithMessage
   }
 }
@@ -106,7 +106,7 @@ export const getProfile = async (): Promise<APIProfileResponse> => {
       throw error
     }
   } catch (error) {
-    const errorWithMessage: ErrorMessageResponse = new Error('Erro interno.')
+    const errorWithMessage: ErrorMessageResponse = new Error('Internal error.')
     throw errorWithMessage
   }
 }

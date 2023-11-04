@@ -2,7 +2,7 @@
 import React from 'react';
 import { usePathname, useSearchParams, useRouter   } from 'next/navigation'
 
-import { useLocalStorage } from '@/hooks';
+import { useLocalStorage } from '@/hooks/useSWR';
 import Icon from '../Icon';
 
 

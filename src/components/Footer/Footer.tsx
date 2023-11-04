@@ -15,7 +15,7 @@ const Footer = () => (
           <a className="w-[40px] h-[40px]" href="https://twitter.com/banhangvnvahan" target="_blank">
             <Icon name="twitter" />
           </a>
-          <h2>
+          {/* <h2>
             <b className="w-[40px] h-[40px]">Skills</b>
           </h2>
           <Image
@@ -179,10 +179,10 @@ const Footer = () => (
             src="https://expressmagazine.net/sites/default/files/netlify-app/vscode.svg"
             alt=""
             priority
-          />
+          /> */}
         </div>
       </div>
-      <div className="flex flex-wrap items-center px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 py-6 gap-4">
+      {/* <div className="flex flex-wrap items-center px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 py-6 gap-4">
         <h2>
           <b className="text-[#ffa400]">GitHub Stats</b>
         </h2>
@@ -200,9 +200,9 @@ const Footer = () => (
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=ex-magazine&layout=compact&langs_count=7&theme=dark"
           />
         </picture>
-      </div>
+      </div> */}
     </div>
-    <div className="border-t border-gray-800 sticky bottom-0 shadow-lg bg-background/40 p-1 backdrop-blur-lg lg:static">
+    <div className="border-t border-gray-800 sticky bottom-0 shadow-lg bg-background/40 p-1 backdrop-blur-lg lg:static z-30">
       <div className="w-[640px] max-w-full px-4 mx-auto relative my-3 sm:my-3 md:my-3 lg:my-4 xl:my-4">       
         <Nav />
       </div>

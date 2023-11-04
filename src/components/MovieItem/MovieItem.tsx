@@ -23,7 +23,7 @@ const MovieItem = ({ details, genres }: Props) => {
       )}
       <div className="absolute bottom-0 bg-gradient-to-t from-black via-transparent to-transparent h-full w-full" />
       <div className="absolute top-0 right-0 flex items-center justify-center mr-2 mt-2 border border-gray-600 w-9 h-9 rounded-full overflow-hidden">
-        <span className="text-gray-300 text-sm z-10">{details?.vote_average}</span>
+        <span className="text-gray-300 text-sm z-10">{details?.vote_average.toFixed(1) }</span>
         <div className="absolute h-full w-full bg-black opacity-100" />
       </div>
       <div className="p-4 absolute bottom-0 h-full w-full">

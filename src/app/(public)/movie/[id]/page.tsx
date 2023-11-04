@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useDetails } from '@/hooks';
+import { useDetails } from '@/hooks/useSWR';
 import DetailsPage from '@/components/DetailsPage';
 
 interface IParamsMovieDetails {

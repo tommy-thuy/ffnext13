@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import { useGenres } from '@/context/genres';
-import { useLocalStorage } from '@/hooks';
+import { useLocalStorage } from '@/hooks/useSWR';
 import { Movie, MediaType } from '@/types';
 
 import MovieItem from '@/components/MovieItem';

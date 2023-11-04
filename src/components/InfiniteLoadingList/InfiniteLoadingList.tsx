@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { useInfiniteLoading } from '@/hooks';
+import { useInfiniteLoading } from '@/hooks/useSWR';
 import { GenresContext, useGenres } from '@/context/genres';
 import { MediaType } from '@/types';
 import MovieItem from '@/components/MovieItem/MovieItem';

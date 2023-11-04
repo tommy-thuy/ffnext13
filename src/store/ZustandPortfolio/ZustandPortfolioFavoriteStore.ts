@@ -1,4 +1,4 @@
-import { UseStoreProps, ZustandUseStoreProps } from '@/types'
+import { ZustandUseStoreProps } from '@/types'
 
 import { StateCreator, create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
@@ -7,41 +7,7 @@ const myMiddlewares = (f: StateCreator<ZustandUseStoreProps>) =>
     devtools(persist(f, { name: 'favorite-store' }))
 
 
-export const useStatusStore = create<UseStoreProps>()((set) => ({
-  status: {
-    isDefault: false,
-    isHovered: false,
-    skillId: '',
-  },
-  setStatus: (skillId: string) => {
-    set((state) => {
-      return {
-        ...state,
-        status: {
-          isDefault: false,
-          isHovered: true,
-          skillId,
-        },
-      }
-    })
-  },
-  clearStatus: () => {
-    set((state) => {
-      return {
-        ...state,
-        status: {
-          isDefault: true,
-          isHovered: false,
-          skillId: '',
-        },
-      }
-    })
-  },
-}))
-
-
-
-export const useFavoriteStore = create<ZustandUseStoreProps>()(
+const useFavoriteStore = create<ZustandUseStoreProps>()(
     myMiddlewares(
         (set) => ({
             favoritedProjects: {
@@ -91,3 +57,4 @@ export const useFavoriteStore = create<ZustandUseStoreProps>()(
 );
 
 
+export default useFavoriteStore

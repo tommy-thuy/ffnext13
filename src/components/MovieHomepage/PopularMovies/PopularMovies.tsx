@@ -12,12 +12,14 @@ const PopularMovies = ({ popularMovies }: { popularMovies: any }) => {
         </Link>
       </div>
       <div className="w-[1330px] max-w-full mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  
-        mx-auto px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 gap-5">
-        {popularMovies.results.slice(0, 4).map((movie: IMovieCard) => (
-          <MovieCard key={movie?.id} movie={movie} />
-        ))}
-      </div>
+        <div
+          className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  
+        mx-auto px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8 gap-5"
+        >
+          {popularMovies.results.slice(0, 4).map((movie: IMovieCard) => (
+            <MovieCard key={movie?.id} movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );

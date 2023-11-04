@@ -34,62 +34,81 @@
 
     /* --ring: (215, 100%, 69%, 0.95; */
 
-    --radius: 0.5rem;
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 224 71% 4%;
+      --foreground: 213 31% 91%;
+
+      --muted: 223 47% 11%;
+      --muted-foreground: 215.4 16.3% 56.9%;
+
+      --accent: 341 100% 75%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --popover: 224 71% 4%;
+      --popover-foreground: 215 20.2% 65.1%;
+
+      --border: 216 34% 17%;
+      --input: 216 34% 17%;
+
+      --card: 224 71% 4%;
+      --card-foreground: 213 31% 91%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 1.2%;
+
+      --secondary: 222.2 47.4% 11.2%;
+      --secondary-foreground: 210 40% 98%;
+
+      --destructive: 0 63% 31%;
+      --destructive-foreground: 210 40% 98%;
+
+      /* --ring: 216 34% 17%; */
+
+      --radius: 0.5rem;
+    }
   }
 
-  .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+  @layer base {
+    * {
+      @apply border-borderColor;
+    }
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 341 100% 75%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    /* --ring: 216 34% 17%; */
-
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-borderColor;
+    body {
+      @apply bg-background text-foreground;
+      font-feature-settings: 'rlig' 1, 'calt' 1;
+    }
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: 'rlig' 1, 'calt' 1;
+  @layer utilities {
+
+    .overscroll-auto form svg,
+    .overscroll-auto form input,
+    .overscroll-auto label button {
+      color: #fff;
+    }
+
+    .bg-gradient-model {
+      background: linear-gradient(45deg,
+        #1b1a1a,
+        #080808);
+    }
+
+    .bg-gradient {
+      background: linear-gradient(283deg,
+        rgba(28, 29, 26, 0.9149159663865546) 0%,
+        rgba(41, 42, 39, 0.9401260504201681) 100%);
+    }
   }
-}
-@layer utilities {  
-  .overscroll-auto form svg,
-  .overscroll-auto form input,
-  .overscroll-auto label button {
-    color: #fff;
+
+  @layer components {
+    .text-shadow {
+      text-shadow: 0px 1px 0px #00000020;
+    }
+
+    .container {
+      @apply sm:max-w-[768px] md:max-w-[1440px] px-4 py-10 md:px-20;
+    }
   }
-}
-@layer components {
-  .text-shadow {
-    text-shadow: 0px 1px 0px #00000020;
-  }
-}
