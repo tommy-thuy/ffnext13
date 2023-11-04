@@ -13,7 +13,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     title: 'None Cache',
-    slug: '/movies-none-cache',
+    slug: '/none-cache-movies',
     icon: 'plus'
   },
   {
