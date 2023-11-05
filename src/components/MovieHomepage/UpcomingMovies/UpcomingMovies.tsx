@@ -6,7 +6,7 @@ const UpcomingMovies = ({ upcomingMovies }: { upcomingMovies: any }) => {
   return (
     <div className="flex flex-col mb-6">
       <div className="w-[1330px] max-w-full mx-auto flex justify-between items-center mt-10 mb-4 px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8">
-        <h1 className="text-2xl font-medium">Upcoming Movies</h1>
+        <h2 className="text-2xl font-medium">Upcoming Movies</h2>
         <Link href="/none-cache-movies/upcoming" className="py-2 px-5 bg-slate-800 text-md font-normal text-white">
           See all
         </Link>
