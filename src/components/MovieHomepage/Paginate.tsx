@@ -11,7 +11,7 @@ const Paginate = ({ currentPage, totalPages, pageType }: IPaginate) => {
     <div className="flex justify-center gap-4 mt-6 mb-6">
       {currentPage > 1 && (
         <Link
-          href={`/movies/${pageType}/?page=${Number(currentPage) - 1}`}
+          href={`/none-cache-movies/${pageType}/?page=${Number(currentPage) - 1}`}
           className="bg-indigo-600 px-6 py-2 rounded-md font-bold hover:bg-indigo-500"
         >
           Prev
@@ -19,7 +19,7 @@ const Paginate = ({ currentPage, totalPages, pageType }: IPaginate) => {
       )}
       {currentPage < totalPages && (
         <Link
-          href={`/movies/${pageType}/?page=${Number(currentPage) + 1}`}
+          href={`/none-cache-movies/${pageType}/?page=${Number(currentPage) + 1}`}
           className="bg-indigo-600 px-6 py-2 rounded-md font-bold hover:bg-indigo-500"
         >
           Next
