@@ -7,7 +7,7 @@ const PopularMovies = ({ popularMovies }: { popularMovies: any }) => {
     <div className="flex flex-col mb-6">
       <div className="w-[1330px] max-w-full mx-auto flex justify-between items-center mt-10 mb-4 px-4 sm:px-4 md:px-4 lg:px-4 xl:px-8">
         <h1 className="text-2xl font-medium">Popular Movies</h1>
-        <Link href="/movies-none-cache/popular" className="py-2 px-5 bg-slate-800 text-md font-normal text-white">
+        <Link href="/none-cache-movies/popular" className="py-2 px-5 bg-slate-800 text-md font-normal text-white">
           See all
         </Link>
       </div>
